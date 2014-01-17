@@ -14,11 +14,13 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.model;
+package com.dshue.repository;
 
-public enum DoorContent {
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
 
-    BICYCLE, //
-    SMALL_FURRY_ANIMAL, //
-    UNKNOWN;
+@Configuration
+@ComponentScan
+public class RepositoryConfiguration {
+
 }

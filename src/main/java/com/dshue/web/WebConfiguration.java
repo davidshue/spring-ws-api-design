@@ -14,11 +14,16 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.model;
+package com.dshue.web;
 
-public enum DoorStatus {
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-    CLOSED, //
-    OPEN, //
-    SELECTED;
+@Configuration
+@ComponentScan
+@EnableWebMvc
+public class WebConfiguration extends WebMvcConfigurerAdapter {
+
 }

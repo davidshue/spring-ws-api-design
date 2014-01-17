@@ -14,23 +14,16 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.web;
+package com.dshue.repository;
 
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+import com.dshue.model.Game;
+import com.dshue.model.GameDoesNotExistException;
 
-import org.springframework.hateoas.Resource;
-import org.springframework.stereotype.Component;
+public interface GameRepository {
 
-import com.nebhale.springone2013.model.Door;
-import com.nebhale.springone2013.model.Game;
+    Game create();
 
-@Component
-final class DoorResourceAssembler {
+    Game retrieve(Integer id) throws GameDoesNotExistException;
 
-    public Resource<Door> toResource(Game game, Door door) {
-        Resource<Door> resource = new Resource<>(door);
-        resource.add(linkTo(GamesController.class).slash(game.getId()).slash("doors").slash(door.getId()).withSelfRel());
-        return resource;
-    }
-
+    void remove(Integer id) throws GameDoesNotExistException;
 }

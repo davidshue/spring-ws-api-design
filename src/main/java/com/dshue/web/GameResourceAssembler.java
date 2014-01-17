@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.web;
+package com.dshue.web;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
@@ -22,7 +22,7 @@ import org.springframework.hateoas.Resource;
 import org.springframework.hateoas.ResourceAssembler;
 import org.springframework.stereotype.Component;
 
-import com.nebhale.springone2013.model.Game;
+import com.dshue.model.Game;
 
 @Component
 final class GameResourceAssembler implements ResourceAssembler<Game, Resource<Game>> {

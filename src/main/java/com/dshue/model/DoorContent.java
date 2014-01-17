@@ -14,16 +14,11 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.repository;
+package com.dshue.model;
 
-import com.nebhale.springone2013.model.Game;
-import com.nebhale.springone2013.model.GameDoesNotExistException;
+public enum DoorContent {
 
-public interface GameRepository {
-
-    Game create();
-
-    Game retrieve(Integer id) throws GameDoesNotExistException;
-
-    void remove(Integer id) throws GameDoesNotExistException;
+    BICYCLE, //
+    SMALL_FURRY_ANIMAL, //
+    UNKNOWN;
 }

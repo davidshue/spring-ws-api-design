@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.web;
+package com.dshue.web;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -22,7 +22,7 @@ import javax.servlet.ServletException;
 import org.springframework.web.context.request.RequestContextListener;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-import com.nebhale.springone2013.repository.RepositoryConfiguration;
+import com.dshue.repository.RepositoryConfiguration;
 
 public final class ApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 

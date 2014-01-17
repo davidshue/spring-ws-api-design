@@ -7,7 +7,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.nebhale.springone2012</groupId>
+	<groupId>com.dshue</groupId>
 	<artifactId>spring-ws-api-design</artifactId>
 	<packaging>war</packaging>
 	<version>1-SNAPSHOT</version>

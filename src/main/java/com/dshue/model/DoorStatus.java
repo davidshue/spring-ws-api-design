@@ -14,16 +14,11 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.web;
+package com.dshue.model;
 
-final class MissingKeyException extends Exception {
+public enum DoorStatus {
 
-    private static final long serialVersionUID = 8871262472437289684L;
-
-    private static final String MESSAGE_FORMAT = "Payload is missing key '%s'";
-
-    public MissingKeyException(String key) {
-        super(String.format(MESSAGE_FORMAT, key));
-    }
-
+    CLOSED, //
+    OPEN, //
+    SELECTED;
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.web;
+package com.dshue.web;
 
 import static org.junit.Assert.assertTrue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -36,8 +36,9 @@ import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.web.context.WebApplicationContext;
 
+import com.dshue.repository.RepositoryConfiguration;
+import com.dshue.web.WebConfiguration;
 import com.jayway.jsonpath.JsonPath;
-import com.nebhale.springone2013.repository.RepositoryConfiguration;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration

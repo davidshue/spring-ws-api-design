@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.repository;
+package com.dshue.repository;
 
 import java.security.SecureRandom;
 import java.util.HashMap;
@@ -25,10 +25,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.springframework.stereotype.Component;
 
-import com.nebhale.springone2013.model.Door;
-import com.nebhale.springone2013.model.DoorContent;
-import com.nebhale.springone2013.model.Game;
-import com.nebhale.springone2013.model.GameDoesNotExistException;
+import com.dshue.model.Door;
+import com.dshue.model.DoorContent;
+import com.dshue.model.Game;
+import com.dshue.model.GameDoesNotExistException;
 
 @Component
 final class InMemoryGameRepository implements GameRepository {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.web;
+package com.dshue.web;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
@@ -27,8 +27,8 @@ import org.springframework.hateoas.ResourceAssembler;
 import org.springframework.hateoas.Resources;
 import org.springframework.stereotype.Component;
 
-import com.nebhale.springone2013.model.Door;
-import com.nebhale.springone2013.model.Game;
+import com.dshue.model.Door;
+import com.dshue.model.Game;
 
 @Component
 final class DoorsResourceAssembler implements ResourceAssembler<Game, Resources<Resource<Door>>> {

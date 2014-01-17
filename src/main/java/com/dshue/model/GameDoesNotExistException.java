@@ -14,16 +14,15 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.web;
+package com.dshue.model;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+public final class GameDoesNotExistException extends Exception {
 
-@Configuration
-@ComponentScan
-@EnableWebMvc
-public class WebConfiguration extends WebMvcConfigurerAdapter {
+    private static final long serialVersionUID = 7996516744853733268L;
 
+    private static final String MESSAGE_FORMAT = "Game '%d' does not exist";
+
+    public GameDoesNotExistException(Integer gameId) {
+        super(String.format(MESSAGE_FORMAT, gameId));
+    }
 }

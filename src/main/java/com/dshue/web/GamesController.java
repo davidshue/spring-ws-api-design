@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.web;
+package com.dshue.web;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
@@ -34,13 +34,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.nebhale.springone2013.model.Door;
-import com.nebhale.springone2013.model.DoorDoesNotExistException;
-import com.nebhale.springone2013.model.DoorStatus;
-import com.nebhale.springone2013.model.Game;
-import com.nebhale.springone2013.model.GameDoesNotExistException;
-import com.nebhale.springone2013.model.IllegalTransitionException;
-import com.nebhale.springone2013.repository.GameRepository;
+import com.dshue.model.Door;
+import com.dshue.model.DoorDoesNotExistException;
+import com.dshue.model.DoorStatus;
+import com.dshue.model.Game;
+import com.dshue.model.GameDoesNotExistException;
+import com.dshue.model.IllegalTransitionException;
+import com.dshue.repository.GameRepository;
 
 @Controller
 @RequestMapping("/games")

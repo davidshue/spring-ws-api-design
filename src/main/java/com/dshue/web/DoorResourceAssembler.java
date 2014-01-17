@@ -14,15 +14,23 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.model;
+package com.dshue.web;
 
-public final class GameDoesNotExistException extends Exception {
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
-    private static final long serialVersionUID = 7996516744853733268L;
+import org.springframework.hateoas.Resource;
+import org.springframework.stereotype.Component;
 
-    private static final String MESSAGE_FORMAT = "Game '%d' does not exist";
+import com.dshue.model.Door;
+import com.dshue.model.Game;
 
-    public GameDoesNotExistException(Integer gameId) {
-        super(String.format(MESSAGE_FORMAT, gameId));
+@Component
+final class DoorResourceAssembler {
+
+    public Resource<Door> toResource(Game game, Door door) {
+        Resource<Door> resource = new Resource<>(door);
+        resource.add(linkTo(GamesController.class).slash(game.getId()).slash("doors").slash(door.getId()).withSelfRel());
+        return resource;
     }
+
 }

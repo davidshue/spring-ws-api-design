@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.nebhale.springone2013.model;
+package com.dshue.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
