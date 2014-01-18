@@ -7,8 +7,8 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>java:com.dshue.repository.RepositoryConfiguration</config>
-		<config>java:com.dshue.web.WebConfiguration</config>
+		<config>java:com.mentat.rest.web.WebConfiguration</config>
+		<config>java:com.mentat.rest.repository.RepositoryConfiguration</config>
 	</configs>
 	<configSets>
 	</configSets>

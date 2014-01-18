@@ -14,23 +14,11 @@
  * limitations under the License.
  */
 
-package com.dshue.web;
+package com.mentat.rest.model;
 
-import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
+public enum DoorContent {
 
-import org.springframework.hateoas.Resource;
-import org.springframework.stereotype.Component;
-
-import com.dshue.model.Door;
-import com.dshue.model.Game;
-
-@Component
-final class DoorResourceAssembler {
-
-    public Resource<Door> toResource(Game game, Door door) {
-        Resource<Door> resource = new Resource<>(door);
-        resource.add(linkTo(GamesController.class).slash(game.getId()).slash("doors").slash(door.getId()).withSelfRel());
-        return resource;
-    }
-
+    BICYCLE, //
+    SMALL_FURRY_ANIMAL, //
+    UNKNOWN;
 }

@@ -7,7 +7,7 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.dshue</groupId>
+	<groupId>com.mentat.rest</groupId>
 	<artifactId>spring-ws-api-design</artifactId>
 	<packaging>war</packaging>
 	<version>1-SNAPSHOT</version>

@@ -14,16 +14,15 @@
  * limitations under the License.
  */
 
-package com.dshue.web;
+package com.mentat.rest.model;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+public final class DoorDoesNotExistException extends Exception {
 
-@Configuration
-@ComponentScan
-@EnableWebMvc
-public class WebConfiguration extends WebMvcConfigurerAdapter {
+    private static final long serialVersionUID = 2092342614756796723L;
 
+    private static final String MESSAGE_FORMAT = "Door '%d' in game '%d' does not exist";
+
+    public DoorDoesNotExistException(Integer gameId, Integer doorId) {
+        super(String.format(MESSAGE_FORMAT, doorId, gameId));
+    }
 }

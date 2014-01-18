@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dshue.repository;
+package com.mentat.rest.repository;
 
 import java.security.SecureRandom;
 import java.util.HashMap;
@@ -25,10 +25,10 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.springframework.stereotype.Component;
 
-import com.dshue.model.Door;
-import com.dshue.model.DoorContent;
-import com.dshue.model.Game;
-import com.dshue.model.GameDoesNotExistException;
+import com.mentat.rest.model.Door;
+import com.mentat.rest.model.DoorContent;
+import com.mentat.rest.model.Game;
+import com.mentat.rest.model.GameDoesNotExistException;
 
 @Component
 final class InMemoryGameRepository implements GameRepository {

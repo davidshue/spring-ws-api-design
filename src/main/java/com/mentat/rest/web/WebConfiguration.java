@@ -14,11 +14,16 @@
  * limitations under the License.
  */
 
-package com.dshue.model;
+package com.mentat.rest.web;
 
-public enum DoorContent {
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-    BICYCLE, //
-    SMALL_FURRY_ANIMAL, //
-    UNKNOWN;
+@Configuration
+@ComponentScan
+@EnableWebMvc
+public class WebConfiguration extends WebMvcConfigurerAdapter {
+
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dshue.web;
+package com.mentat.rest.web;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
@@ -27,8 +27,8 @@ import org.springframework.hateoas.ResourceAssembler;
 import org.springframework.hateoas.Resources;
 import org.springframework.stereotype.Component;
 
-import com.dshue.model.Door;
-import com.dshue.model.Game;
+import com.mentat.rest.model.Door;
+import com.mentat.rest.model.Game;
 
 @Component
 final class DoorsResourceAssembler implements ResourceAssembler<Game, Resources<Resource<Door>>> {

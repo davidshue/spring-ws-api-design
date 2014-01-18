@@ -14,15 +14,16 @@
  * limitations under the License.
  */
 
-package com.dshue.model;
+package com.mentat.rest.web;
 
-public final class DoorDoesNotExistException extends Exception {
+final class MissingKeyException extends Exception {
 
-    private static final long serialVersionUID = 2092342614756796723L;
+    private static final long serialVersionUID = 8871262472437289684L;
 
-    private static final String MESSAGE_FORMAT = "Door '%d' in game '%d' does not exist";
+    private static final String MESSAGE_FORMAT = "Payload is missing key '%s'";
 
-    public DoorDoesNotExistException(Integer gameId, Integer doorId) {
-        super(String.format(MESSAGE_FORMAT, doorId, gameId));
+    public MissingKeyException(String key) {
+        super(String.format(MESSAGE_FORMAT, key));
     }
+
 }

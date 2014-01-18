@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dshue.web;
+package com.mentat.rest.web;
 
 import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
@@ -34,13 +34,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.dshue.model.Door;
-import com.dshue.model.DoorDoesNotExistException;
-import com.dshue.model.DoorStatus;
-import com.dshue.model.Game;
-import com.dshue.model.GameDoesNotExistException;
-import com.dshue.model.IllegalTransitionException;
-import com.dshue.repository.GameRepository;
+import com.mentat.rest.model.Door;
+import com.mentat.rest.model.DoorDoesNotExistException;
+import com.mentat.rest.model.DoorStatus;
+import com.mentat.rest.model.Game;
+import com.mentat.rest.model.GameDoesNotExistException;
+import com.mentat.rest.model.IllegalTransitionException;
+import com.mentat.rest.repository.GameRepository;
 
 @Controller
 @RequestMapping("/games")

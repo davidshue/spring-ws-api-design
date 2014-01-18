@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package com.dshue.web;
+package com.mentat.rest.repository;
 
-final class MissingKeyException extends Exception {
+import com.mentat.rest.model.Game;
+import com.mentat.rest.model.GameDoesNotExistException;
 
-    private static final long serialVersionUID = 8871262472437289684L;
+public interface GameRepository {
 
-    private static final String MESSAGE_FORMAT = "Payload is missing key '%s'";
+    Game create();
 
-    public MissingKeyException(String key) {
-        super(String.format(MESSAGE_FORMAT, key));
-    }
+    Game retrieve(Integer id) throws GameDoesNotExistException;
 
+    void remove(Integer id) throws GameDoesNotExistException;
 }

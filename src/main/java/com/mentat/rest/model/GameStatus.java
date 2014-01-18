@@ -14,15 +14,12 @@
  * limitations under the License.
  */
 
-package com.dshue.model;
+package com.mentat.rest.model;
 
-public final class GameDoesNotExistException extends Exception {
+public enum GameStatus {
 
-    private static final long serialVersionUID = 7996516744853733268L;
-
-    private static final String MESSAGE_FORMAT = "Game '%d' does not exist";
-
-    public GameDoesNotExistException(Integer gameId) {
-        super(String.format(MESSAGE_FORMAT, gameId));
-    }
+    AWAITING_INITIAL_SELECTION, //
+    AWAITING_FINAL_SELECTION, //
+    LOST, //
+    WON;
 }

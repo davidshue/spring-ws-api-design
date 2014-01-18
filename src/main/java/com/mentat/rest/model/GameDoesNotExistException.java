@@ -14,16 +14,15 @@
  * limitations under the License.
  */
 
-package com.dshue.repository;
+package com.mentat.rest.model;
 
-import com.dshue.model.Game;
-import com.dshue.model.GameDoesNotExistException;
+public final class GameDoesNotExistException extends Exception {
 
-public interface GameRepository {
+    private static final long serialVersionUID = 7996516744853733268L;
 
-    Game create();
+    private static final String MESSAGE_FORMAT = "Game '%d' does not exist";
 
-    Game retrieve(Integer id) throws GameDoesNotExistException;
-
-    void remove(Integer id) throws GameDoesNotExistException;
+    public GameDoesNotExistException(Integer gameId) {
+        super(String.format(MESSAGE_FORMAT, gameId));
+    }
 }

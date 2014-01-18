@@ -14,12 +14,23 @@
  * limitations under the License.
  */
 
-package com.dshue.model;
+package com.mentat.rest.web;
 
-public enum GameStatus {
+import static org.springframework.hateoas.mvc.ControllerLinkBuilder.linkTo;
 
-    AWAITING_INITIAL_SELECTION, //
-    AWAITING_FINAL_SELECTION, //
-    LOST, //
-    WON;
+import org.springframework.hateoas.Resource;
+import org.springframework.stereotype.Component;
+
+import com.mentat.rest.model.Door;
+import com.mentat.rest.model.Game;
+
+@Component
+final class DoorResourceAssembler {
+
+    public Resource<Door> toResource(Game game, Door door) {
+        Resource<Door> resource = new Resource<>(door);
+        resource.add(linkTo(GamesController.class).slash(game.getId()).slash("doors").slash(door.getId()).withSelfRel());
+        return resource;
+    }
+
 }

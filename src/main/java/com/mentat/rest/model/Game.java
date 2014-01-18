@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.dshue.model;
+package com.mentat.rest.model;
 
 import java.util.HashMap;
 import java.util.HashSet;
