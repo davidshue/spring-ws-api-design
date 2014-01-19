@@ -18,6 +18,8 @@ package com.mentat.rest.web;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.MediaType;
+import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -26,4 +28,19 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @EnableWebMvc
 public class WebConfiguration extends WebMvcConfigurerAdapter {
 
+    /**
+     * Setup a simple strategy: use all the defaults and return XML by default when not sure.
+     */
+    @Override
+    public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+        // configurer.favorPathExtension(false).
+        // favorParameter(false).
+        // parameterName("mediaType").
+        // ignoreAcceptHeader(false).
+        // useJaf(false).
+        // defaultContentType(MediaType.APPLICATION_JSON).
+        // mediaType("xml", MediaType.APPLICATION_XML).
+        // mediaType("json", MediaType.APPLICATION_JSON);
+        configurer.defaultContentType(MediaType.APPLICATION_XML);
+    }
 }
