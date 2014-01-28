@@ -43,6 +43,8 @@ class RestResponseTest {
         module.setDefaultUseWrapper(false)
         XmlMapper xmlMapper = new XmlMapper(module)
 
+        xmlMapper.writeValue(System.out, result)
+
         String xml = xmlMapper.writeValueAsString(result)
         println xml
 
