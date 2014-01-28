@@ -33,4 +33,9 @@ public class Person {
 
     @XmlElement
     int age
+
+    @XmlElement
+    List<String> children = ['Aiden', 'Penney']
+
+    Map<String, String> data = [a:'1', b:'2']
 }
